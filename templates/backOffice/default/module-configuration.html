@@ -1,0 +1,42 @@
+<div class="general-block-decorator">
+    <div class="title title-without-tabs">{intl l="PxlPluriAdminProfile configuration" d='pxlpluriadminprofile.bo.default'}</div>
+
+    <div class="form-container">
+        {form name="pxlpluriadminprofile.config_form"}
+        <form action="{url path='/admin/module/PxlPluriAdminProfile/configuration'}" method="post">
+            {form_hidden_fields form=$form}
+
+            {if $form_error}
+            <div class="alert alert-danger">{$form_error_message}</div>
+            {/if}
+
+            {form_field form=$form field='success_url'}
+            <input type="hidden" name="{$name}" value="{url path={navigate to='current'}}" />
+            {/form_field}
+
+            <h2>{intl l="Admin profiles available" d='pxlpluriadminprofile.bo.default'}</h2>
+
+            {$profiles = ['guest', 'spip', 'thelia', 'ro', 'web', 'admin']}
+
+            <div class="row">
+                {foreach $profiles as $profile}
+                <div class="col-md-3">
+                    {form_field field=$profile}
+                    <div class="form-group">
+                        <div>
+                            <label for="{$label_attr.for}">{$label}</label>
+                        </div>
+                        <div class="make-switch switch-small" data-on="success" data-off="danger" data-on-label="<i class='glyphicon glyphicon-ok-circle'></i>" data-off-label="<i class='glyphicon glyphicon-remove-circle'></i>">
+                            <input id="{$label_attr.for}" name="{$name}" type="checkbox" value="{$value}"{if $value == 1} checked{/if}>
+                        </div>
+                    </div>
+                    {/form_field}
+                </div>
+                {/foreach}
+            </div>
+
+            <input type="submit" class="btn btn-success form-control" />
+        </form>
+        {/form}
+    </div>
+</div>

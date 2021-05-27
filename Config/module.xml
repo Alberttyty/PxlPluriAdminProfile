@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="http://thelia.net/schema/dic/module"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://thelia.net/schema/dic/module http://thelia.net/schema/dic/module/module-2_2.xsd">
+    <fullnamespace>PxlPluriAdminProfile\PxlPluriAdminProfile</fullnamespace>
+    <descriptive locale="en_US">
+        <title>Admin Profiles</title>
+        <subtitle>Create and manage Admin Profiles</subtitle>
+    </descriptive>
+    <descriptive locale="fr_FR">
+        <title>Profils d'administration</title>
+        <subtitle>Permet de créer et de gérer différents profils d'administration</subtitle>
+    </descriptive>
+    <!-- <logo></logo> -->
+    <!--<images-folder>images</images-folder>-->
+    <languages>
+        <language>en_US</language>
+        <language>fr_FR</language>
+    </languages>
+    <version>1.0.0</version>
+    <authors>
+        <author>
+            <name>Thierry CARESMEL</name>
+            <company>Pixel Plurimédia</company>
+            <email>thierry@pixel-plurimedia.fr</email>
+        </author>
+    </authors>
+    <type>classic</type>
+    <!--
+    module dependencies
+    <required>
+        <module version="&gt;=0.1">Front</module>
+        <module version="~1.0">HookCart</module>
+        <module version="&gt;0.2">HookSearch</module>
+    </required>
+    -->
+    <thelia>2.3.0</thelia>
+    <stability>other</stability>
+    <mandatory>0</mandatory>
+    <hidden>0</hidden>
+</module>
